@@ -1,4 +1,5 @@
 import Header from "@/components/Header/Header";
+import LineGraph from "@/components/LineGraph/LineGraph";
 import Sidebar from "@/components/Sidebar/Siderbar";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
         <div className="flex">
           <Sidebar/>
           <Header/>
+          <LineGraph/>
         </div>
     </main>
   );
