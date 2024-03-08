@@ -25,18 +25,18 @@ export default function Home() {
       price: 5,
       percent: 11
     }
-  ]
+  ];
 
   const dataTransactions = [
     { n: 1, image: './discordFoto.jpg', nome: 'Rolemberg Junior', valor: 2500, data: '13/05/2003', tipo: 'pix' },
     { n: 2, image: './discordFoto.jpg', nome: 'Italo Dutra', valor: 5500, data: '23/10/2013', tipo: 'ted' },
     { n: 3, image: './discordFoto.jpg', nome: 'Ruan Pablo', valor: 7500, data: '09/06/2023', tipo: 'ted' },
     { n: 4, image: './discordFoto.jpg', nome: 'Luan Carlos', valor: 8500, data: '03/02/2024', tipo: 'pix' }
-  ]
+  ];
 
   return (
     <main>
-        <div className="flex gap-10 w-[90%] mx-auto">
+        <div className="flex gap-10 w-[90%] mx-auto mt-10">
           <Sidebar/>
           <div className="flex flex-wrap w-[80%] gap-10">
             <Header/>

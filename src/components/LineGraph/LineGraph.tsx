@@ -21,7 +21,7 @@ export default function LineGraph(){
             <ResponsiveContainer width="100%" height="80%">
                 <AreaChart
                     width={600}
-                    height={700}
+                    height={800}
                     data={dataGraph}
                     margin={{
                     top: 10,
@@ -29,12 +29,18 @@ export default function LineGraph(){
                     left: 0,
                     bottom: 0,
                     }}
+                    
                 >
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="name" />
-                    <YAxis dataKey="uv"/>
+                    <defs>
+                        <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="5%" stopColor="#FD7C39" stopOpacity={0.8} />
+                            <stop offset="95%" stopColor="#FD7C39" stopOpacity={0} />
+                        </linearGradient>
+                    </defs>
+                    <XAxis dataKey="name"/>
+                    <YAxis type="number" tickSize={15} dataKey="uv"/>
                     <Tooltip />
-                    <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8"/>
+                    <Area type="monotone" dataKey="uv"  fill="url(#colorUv)" strokeWidth={3} stroke="#FD7C39"/>
                 </AreaChart>
             </ResponsiveContainer>
         </div>

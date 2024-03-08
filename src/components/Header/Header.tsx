@@ -6,7 +6,7 @@ export default function Header(){
         <div className="flex justify-between items-center bg-[#131417] rounded-xl shadow-xl w-[100%] h-[100px] p-4">
             <h1 className="text-white font-medium text-xl">Dashboard</h1>
             <div className="flex items-center gap-7">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center bg-[#15181F] rounded-3xl gap-2 px-4 py-2 cursor-pointer">
                     <p className="text-white">Escuro</p>
                     <FaMoon color="white" />
                 </div>

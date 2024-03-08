@@ -59,10 +59,9 @@ export default function TransactionsCard({ data }:TransactionsCardProps){
                                 <td className="text-white text-center border-b-2 border-t-2 border-[#F6F6FB] border-opacity-10 p-[8px]">
                                     {row.data}
                                 </td>
-                                <td className={`border-b-2 border-t-2 border-[#F6F6FB] border-opacity-10 p-[8px]`}>
-                                    <div className={`text-end ${ row.tipo === 'pix' ? 'text-[#00D2FF] border-2 border-[#00D2FF]' : 'text-[#8980FF] border-2 border-[#8980FF]'} rounded-xl w-12 `}>
-                                        {row.tipo}
-                                    </div>
+                                <td className={`relative text-end ${ row.tipo === 'pix' ? 'text-[#00D2FF]' : 'text-[#8980FF]'} border-[#F6F6FB] border-b-2 border-t-2 border-opacity-10 p-[8px]`}>
+                                        <p className="mr-2 mb-1">{row.tipo}</p>
+                                        <div className={`absolute inset-0 top-4 left-20 ${ row.tipo === 'pix' ? 'text-[#00D2FF] border-2 border-[#00D2FF] bg-[#00D2FF]' : 'text-[#8980FF] border-2 border-[#8980FF] bg-[#8980FF]'} opacity-25 rounded-xl w-14 h-7 `}/>
                                 </td>
                         </tr>
                     ))}
