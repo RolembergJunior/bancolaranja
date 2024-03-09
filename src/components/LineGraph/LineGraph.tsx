@@ -1,6 +1,6 @@
 'use client'
 
-import {AreaChart, Area, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer}  from "recharts";
+import {AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer}  from "recharts";
 
 export default function LineGraph(){
     const dataGraph =[
@@ -13,9 +13,9 @@ export default function LineGraph(){
     ];
 
     return (
-        <div className="-col-span-2 -row-span-3  bg-[#131417] rounded-xl shadow-xl w-[55%] h-[400px] space-y-5 p-5">
+        <div className="-col-span-2 -row-span-3 bg-[#FFF] dark:bg-[#131417] rounded-xl shadow-xl w-[55%] h-[400px] space-y-5 p-5">
             <div className="flex items-center justify-between">
-                <h1 className="text-white text-xl font-medium px-3">Transações</h1>
+                <h1 className="text-black dark:text-white text-xl font-medium px-3">Transações</h1>
                 <p className="text-[#FD7C39] text-2xl font-normal px-3">42.43M</p>
             </div>
             <ResponsiveContainer width="100%" height="80%">

@@ -6,7 +6,7 @@ import { IoDocumentTextOutline, IoExitOutline, IoHomeSharp } from "react-icons/i
 export default function Sidebar(){
     return(
        <>
-            <div className="flex flex-col justify-between bg-[#131417] w-[20%] h-[100vh] py-6 rounded-xl shadow-xl">
+            <div className="flex flex-col justify-between bg-[#FFF] dark:bg-[#131417] w-[20%] h-[100vh] py-6 rounded-xl shadow-xl">
                 <div>
                     <img 
                         src="./logo.png" 
@@ -20,20 +20,20 @@ export default function Sidebar(){
                             <div className="absolute bg-[#FD7C39] h-[70px] inset-0 opacity-10 " />
                         </div>
                         <div className="flex items-center gap-3 h-[60px] pl-16 cursor-pointer">
-                            <FaFireFlameCurved className="text-white"/>
-                            <p className="text-white text-center text-lg font-medium ">Investimentos</p>
+                            <FaFireFlameCurved className="text-black dark:text-white"/>
+                            <p className="text-black dark:text-white text-center text-lg font-medium ">Investimentos</p>
                         </div>
                         <div className="flex items-center gap-3 h-[60px] pl-16 cursor-pointer">
-                            <FaUserAlt className="text-white"/>
-                            <li className="text-white text-lg font-medium ">Meus competidores</li>
+                            <FaUserAlt className="text-black dark:text-white"/>
+                            <li className="text-black dark:text-white text-lg font-medium ">Meus competidores</li>
                         </div>
                         <div className="flex items-center gap-3 h-[60px] pl-16 cursor-pointer">
-                            <IoDocumentTextOutline className="text-white"/>
-                            <li className="text-white text-lg font-medium ">Documentos</li>
+                            <IoDocumentTextOutline className="text-black dark:text-white"/>
+                            <li className="text-black dark:text-white text-lg font-medium ">Documentos</li>
                         </div>
                         <div className="flex items-center gap-3 h-[60px] pl-16 cursor-pointer">
-                            <FaBookmark className="text-white"/>
-                            <li className="text-white text-lg font-medium ">Salvos</li>
+                            <FaBookmark className="text-black dark:text-white"/>
+                            <li className="text-black dark:text-white text-lg font-medium ">Salvos</li>
                         </div>
                     </ul>
                 </div>

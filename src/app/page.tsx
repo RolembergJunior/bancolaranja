@@ -35,8 +35,8 @@ export default function Home() {
   ];
 
   return (
-    <main>
-        <div className="flex gap-10 w-[90%] mx-auto mt-10">
+    <main className="bg-[#F6F6FB] dark:bg-[#15181F]">
+        <div className="flex gap-10 w-[80%] mx-auto mt-10">
           <Sidebar/>
           <div className="flex flex-wrap w-[80%] gap-10">
             <Header/>
