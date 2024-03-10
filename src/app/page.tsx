@@ -1,13 +1,25 @@
 'use client'
 
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 import Header from "@/components/Header/Header";
 import LineGraph from "@/components/LineGraph/LineGraph";
 import PieChart from "@/components/PieChart/PieChart";
 import PriceCard from "@/components/PriceCard/PriceCard";
 import Sidebar from "@/components/Sidebar/Siderbar";
 import TransactionsCard from "@/components/TransactionsCard/TransactionsCard";
+import Spinner from "@/components/Spinner/Spinner";
 
 export default function Home() {
+  const { theme } = useTheme();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() =>{
+    const savedTheme = localStorage.getItem('theme');
+    if(savedTheme === theme){
+      setLoading(false);
+    }
+},[])
 
   const dataValues = [
     {
@@ -34,8 +46,10 @@ export default function Home() {
     { n: 4, image: './discordFoto.jpg', nome: 'Luan Carlos', valor: 8500, data: '03/02/2024', tipo: 'pix' }
   ];
 
+  if(loading) return <Spinner/>
+  if(!loading)
   return (
-    <main className="bg-[#F6F6FB] dark:bg-[#15181F]">
+    <main>
         <div className="flex gap-10 w-[80%] mx-auto mt-10">
           <Sidebar/>
           <div className="flex flex-wrap w-[80%] gap-10">
